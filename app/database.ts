@@ -36,7 +36,7 @@ async function applySchemaValidation(db: mongodb.Db) {
                time: {
                    bsonType: "string",
                    description: "'time' is required and is one of '7:00p', '7:30p', or '8:00p'",
-                   enum: ["7:00p", "8:00p", "8:30p"],
+                   enum: ["7:00", "8:00", "8:30"],
                },
            },
        },
