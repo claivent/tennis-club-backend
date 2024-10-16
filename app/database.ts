@@ -38,6 +38,12 @@ async function applySchemaValidation(db: mongodb.Db) {
                    description: "'time' is required and must be in the format HH:mm with 15-minute intervals",
                    pattern: "^(?:[01]\\d|2[0-3]):(?:00|15|30|45)$"
                },
+               date: {
+                   bsonType: "number",
+                   description: "'date' is required and must be a valid Unix timestamp",
+                   minimum: 0, // Minimální hodnota pro Unix timestamp
+                   maximum: 2147483647, // Maximální hodnota pro Unix timestamp (v sekundách)
+               },
            },
        },
    };
